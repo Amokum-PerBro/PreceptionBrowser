@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.tsbuildinfo
+
+# runtime artifacts
+.runs/
+traces/
+screenshots/
+*.har
+*.webm
+
+# secrets — never commit keys or captured sessions
+.env
+.env.*
+!.env.example
+auth.json
+storage-state.json
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+*.log
+
+# local npm cache used when the sandbox blocks the default one
+.npm-cache/
+
+# internal notes (launch plans, drafts) — kept local, not published
+notes/
+
+# portable history bundle (git bundle create) — a transfer artifact, not source
+*.bundle

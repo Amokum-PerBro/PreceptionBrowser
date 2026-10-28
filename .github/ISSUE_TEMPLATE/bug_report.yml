@@ -1,0 +1,53 @@
+name: Bug report
+description: Something is wrong, or the agent claimed something it did not do.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. For a security issue, do **not** use this form — see [SECURITY.md](../SECURITY.md).
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Include the goal, the observation, and the action if you have them.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: v0.0.1 or a commit sha
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The smallest script or test that shows it. A failing `node test/run.ts` excerpt is ideal.
+      render: shell
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Agent loop
+        - Action validation
+        - Snapshot parser
+        - Fixture browser
+        - Evaluation harness
+        - Docs
+        - Other
+    validations:
+      required: true

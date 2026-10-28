@@ -1,0 +1,34 @@
+{
+  "name": "perceptionbrowser",
+  "version": "0.0.1",
+  "description": "An AI browser agent that has to prove it worked: observe, act, verify, measure.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "ai",
+    "browser",
+    "agent",
+    "automation",
+    "playwright",
+    "accessibility-tree"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "test": "node test/run.ts",
+    "test:watch": "node --test --watch test/",
+    "eval": "node src/eval/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

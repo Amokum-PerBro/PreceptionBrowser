@@ -1,0 +1,44 @@
+name: Proposal
+description: A capability, a task, or a change to the contract.
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals that name a **checkable** outcome move fastest. "The agent should be better at forms" is hard to accept; "these three tasks should pass" is easy.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can't the agent do today, concretely?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: How would we know it works?
+      description: A task for `src/eval/tasks.ts`, a test, or a number on the benchmark.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: contract
+    attributes:
+      label: Does this change `src/core/types.ts`?
+      description: Widening the action space needs a threat-model note.
+      options:
+        - "No"
+        - "Yes — new action or field"
+        - "Yes — new interface"
+        - "Not sure"
+    validations:
+      required: true
